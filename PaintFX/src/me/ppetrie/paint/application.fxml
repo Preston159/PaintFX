@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:controller="me.ppetrie.paint.PaintController" xmlns:fx="http://javafx.com/fxml">
+
+	<ScrollPane AnchorPane.leftAnchor="50" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20">
+		<Group>
+			<StackPane>
+				<Group>
+					<Canvas fx:id="canvas" StackPane.alignment="CENTER" />
+				</Group>
+				<Group>
+					<Canvas fx:id="drawCanvas" StackPane.alignment="CENTER" />
+				</Group>
+			</StackPane>
+		</Group>
+	</ScrollPane>
+
+	<MenuBar AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" prefHeight="30">
+		<menus>
+			<Menu text="_File">
+				<MenuItem text="New" onAction="#handleNew" accelerator="Shortcut+N" />
+				<MenuItem text="Open" onAction="#handleOpen" accelerator="Shortcut+O" />
+				<MenuItem text="Save" onAction="#handleSave" accelerator="Shortcut+S" />
+				<MenuItem text="Save as" onAction="#handleSaveAs" accelerator="Shortcut+Shift+S" />
+				<MenuItem text="Exit" onAction="#handleExit" accelerator="Shortcut+E" />
+			</Menu>
+			<Menu text="Edit">
+				<MenuItem fx:id="undoButton" text="Undo" onAction="#handleUndo" accelerator="Shortcut+Z" />
+				<MenuItem fx:id="redoButton" text="Redo" onAction="#handleRedo" accelerator="Shortcut+Shift+Z" />
+				<MenuItem fx:id="copyButton" text="Cut" onAction="#handleCut" accelerator="Shortcut+X" />
+				<MenuItem fx:id="pasteButton" text="Paste" onAction="#handlePaste" accelerator="Shortcut+V" />
+				<MenuItem fx:id="cropButton" text="Crop" onAction="#handleCrop" accelerator="Shortcut+Shift+C" />
+				<CheckMenuItem fx:id="fillToggle" text="Fill" onAction="#handleFillToggle" />
+				<CheckMenuItem fx:id="fillSecToggle" text="Fill With Secondary Color" onAction="#handleFillSecToggle" />
+			</Menu>
+			<Menu text="Tools">
+				<CheckMenuItem fx:id="penCheck" text="Pen" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="lineCheck" text="Line" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="moveCheck" text="Move" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="eraserCheck" text="Eraser" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="shapeCheck" text="Shape" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="dropperCheck" text="Dropper" onAction="#handleToolChange" />
+				<CheckMenuItem fx:id="textCheck" text="Text" onAction="#handleToolChange" />
+			</Menu>
+			<Menu text="Select">
+				<MenuItem text="All" accelerator="Shortcut+A" />
+				<MenuItem text="None" accelerator="Shortcut+Shift+A" />
+			</Menu>
+		</menus>
+	</MenuBar>
+	
+	<VBox fx:id="toolBar" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="0" prefWidth="50">
+		<Button fx:id="lineButton" text="Line" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="penButton" text="Pen" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="eraserButton" text="Eraser" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="moveButton" text="Move" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="shapeButton" text="Shape" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="dropperButton" text="Dropper" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<Button fx:id="textButton" text="Text" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
+		<!-- <Button fx:id="fillButton" text="Fill" prefWidth="50" prefHeight="50" onAction="#handleToolChange"></Button> -->
+	</VBox>
+	
+	<HBox fx:id="bottomBar" alignment="bottom_left" prefHeight="20" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+		<ColorPicker fx:id="primaryColor" onAction="#handleColorChange" />
+		<Button text="&#8596;" onAction="#handleColorSwap" />
+		<ColorPicker fx:id="secondaryColor" onAction="#handleColorChange" />
+		<Label text="Width:" />
+		<ComboBox fx:id="widthBox" editable="true" prefWidth="60">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="2" />
+					<String fx:value="4" />
+					<String fx:value="8" />
+					<String fx:value="12" />
+					<String fx:value="20" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Label text="Scale:" />
+		<ComboBox fx:id="scaleBox" editable="true" prefWidth="100">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="10%" />
+					<String fx:value="25%" />
+					<String fx:value="50%" />
+					<String fx:value="75%" />
+					<String fx:value="100%" />
+					<String fx:value="150%" />
+					<String fx:value="200%" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+	</HBox>
+</AnchorPane>

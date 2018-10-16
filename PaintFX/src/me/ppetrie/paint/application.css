@@ -1,0 +1,15 @@
+
+#bottomBar {
+	-fx-background-color: #ddd;
+}
+
+#toolBar {
+	-fx-border-color: #333;
+	-fx-border-width: 0 1 0 0;
+	-fx-border-style: solid;
+	-fx-background-color: #eee;
+}
+
+#toolBar > Button {
+	-fx-padding: 0;
+}
