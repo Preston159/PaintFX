@@ -39,6 +39,10 @@ public class TextTool extends Tool {
 		double height = controller.getCurrentLayer().getHeight();
 		double width = controller.getCurrentLayer().getWidth();
 		
+		if((int) height <= 0 || (int) width <= 0) {
+			return;
+		}
+		
 		GraphicsContext gc = controller.getDrawCanvas().getGraphicsContext2D();
 		
 		if(ToolSet.SHAPE.getFillShapes()) {
