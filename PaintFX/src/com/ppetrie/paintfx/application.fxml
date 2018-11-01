@@ -10,7 +10,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane fx:controller="me.ppetrie.paint.PaintController" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane fx:controller="com.ppetrie.paintfx.PaintController" xmlns:fx="http://javafx.com/fxml">
 
 	<ScrollPane AnchorPane.leftAnchor="30" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="100" AnchorPane.bottomAnchor="0">
 		<Group>
