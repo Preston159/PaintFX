@@ -257,7 +257,7 @@ public class Drawer implements EventHandler<MouseEvent> {
 	/**
 	 * Crops the image to the portion selected by the move tool
 	 */
-	public void crop() {
+/*	public void crop() {
 		if(currentTool == Tools.MOVE && ToolSet.MOVE.getAwaitingPlace()) {
 			for(Canvas c : controller.getAllLayers()) {
 				c.setWidth(ToolSet.MOVE.getSelection().getWidth());
@@ -270,7 +270,7 @@ public class Drawer implements EventHandler<MouseEvent> {
 		controller.getDrawCanvas().getGraphicsContext2D().drawImage(SwingFXUtils.toFXImage(ToolSet.MOVE.getSelection(), null), 0, 0);
 		drawToLayer();
 		ToolSet.MOVE.reset();
-	}
+	}	*/
 	
 	private static final int LEFT = 0;
 	private static final int UP = 1;

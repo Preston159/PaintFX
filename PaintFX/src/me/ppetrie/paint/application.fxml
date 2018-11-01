@@ -39,7 +39,7 @@
 				<MenuItem fx:id="redoButton" text="Redo" onAction="#handleRedo" accelerator="Shortcut+Shift+Z" />
 				<MenuItem fx:id="copyButton" text="Cut" onAction="#handleCut" accelerator="Shortcut+X" />
 				<MenuItem fx:id="pasteButton" text="Paste" onAction="#handlePaste" accelerator="Shortcut+V" />
-				<MenuItem fx:id="cropButton" text="Crop" onAction="#handleCrop" accelerator="Shortcut+Shift+C" />
+				<!--<MenuItem fx:id="cropButton" text="Crop" onAction="#handleCrop" accelerator="Shortcut+Shift+C" />-->
 				<CheckMenuItem fx:id="fillToggle" text="Fill" onAction="#handleFillToggle" />
 				<CheckMenuItem fx:id="fillSecToggle" text="Fill With Secondary Color" onAction="#handleFillSecToggle" />
 			</Menu>
