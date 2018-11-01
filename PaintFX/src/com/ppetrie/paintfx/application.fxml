@@ -12,7 +12,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane fx:controller="com.ppetrie.paintfx.PaintController" xmlns:fx="http://javafx.com/fxml">
 
-	<ScrollPane AnchorPane.leftAnchor="30" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="100" AnchorPane.bottomAnchor="0">
+	<ScrollPane AnchorPane.leftAnchor="30" AnchorPane.topAnchor="75" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
 		<Group>
 			<StackPane>
 				<Group>
@@ -70,12 +70,11 @@
 		<!-- <Button fx:id="fillButton" text="Fill" prefWidth="30" prefHeight="30" onAction="#handleToolChange"></Button> -->
 	</VBox>
 	
-	<VBox fx:id="rightBar" alignment="top_right" prefWidth="100" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="30">
-		<ColorPicker fx:id="primaryColor" onAction="#handleColorChange" prefWidth="100" />
-		<Button text="&#8596;" onAction="#handleColorSwap"  prefWidth="100" />
-		<ColorPicker fx:id="secondaryColor" onAction="#handleColorChange" prefWidth="100" />
-		<Label text="Width:" styleClass="centered" prefWidth="100"/>
-		<ComboBox fx:id="widthBox" editable="true" prefWidth="100">
+	<GridPane fx:id="topBar" alignment="top_left" prefHeight="25" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30">
+		<ColorPicker fx:id="primaryColor" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#handleColorChange" prefWidth="100" />
+		<Button text="&#8596;" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleColorSwap"  prefWidth="30" />
+		<ColorPicker fx:id="secondaryColor" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleColorChange" prefWidth="100" />
+		<ComboBox fx:id="widthBox" GridPane.columnIndex="3" GridPane.rowIndex="1" editable="true" prefWidth="100">
 			<items>
 				<FXCollections fx:factory="observableArrayList">
 					<String fx:value="2" />
@@ -85,9 +84,13 @@
 					<String fx:value="20" />
 				</FXCollections>
 			</items>
+			<GridPane.margin>
+				<Insets>
+					<left>10</left>
+				</Insets>
+			</GridPane.margin>
 		</ComboBox>
-		<Label text="Scale:" styleClass="centered" prefWidth="100" />
-		<ComboBox fx:id="scaleBox" editable="true" prefWidth="100">
+		<ComboBox fx:id="scaleBox" GridPane.columnIndex="4" GridPane.rowIndex="1" editable="true" prefWidth="100">
 			<items>
 				<FXCollections fx:factory="observableArrayList">
 					<String fx:value="10%" />
@@ -99,6 +102,34 @@
 					<String fx:value="200%" />
 				</FXCollections>
 			</items>
+			<GridPane.margin>
+				<Insets>
+					<left>10</left>
+				</Insets>
+			</GridPane.margin>
 		</ComboBox>
-	</VBox>
+		<!-- Labels -->
+		<Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Primary Color">
+			<GridPane.margin>
+				<Insets>
+					<left>2</left>
+				</Insets>
+			</GridPane.margin>
+		</Label>
+		<Label GridPane.columnIndex="2" GridPane.rowIndex="0" text="Secondary Color" />
+		<Label GridPane.columnIndex="3" GridPane.rowIndex="0" text="Width">
+			<GridPane.margin>
+				<Insets>
+					<left>10</left>
+				</Insets>
+			</GridPane.margin>
+		</Label>
+		<Label GridPane.columnIndex="4" GridPane.rowIndex="0" text="Scale">
+			<GridPane.margin>
+				<Insets>
+					<left>10</left>
+				</Insets>
+			</GridPane.margin>
+		</Label>
+	</GridPane>
 </AnchorPane>
