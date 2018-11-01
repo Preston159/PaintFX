@@ -70,7 +70,7 @@
 		<!-- <Button fx:id="fillButton" text="Fill" prefWidth="30" prefHeight="30" onAction="#handleToolChange"></Button> -->
 	</VBox>
 	
-	<VBox fx:id="rightBar" alignment="top_right" spacing="10" prefWidth="100" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="30">
+	<VBox fx:id="rightBar" alignment="top_right" prefWidth="100" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="30">
 		<ColorPicker fx:id="primaryColor" onAction="#handleColorChange" prefWidth="100" />
 		<Button text="&#8596;" onAction="#handleColorSwap"  prefWidth="100" />
 		<ColorPicker fx:id="secondaryColor" onAction="#handleColorChange" prefWidth="100" />
