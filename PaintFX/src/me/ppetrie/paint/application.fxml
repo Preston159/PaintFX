@@ -12,7 +12,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane fx:controller="me.ppetrie.paint.PaintController" xmlns:fx="http://javafx.com/fxml">
 
-	<ScrollPane AnchorPane.leftAnchor="50" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="20">
+	<ScrollPane AnchorPane.leftAnchor="30" AnchorPane.topAnchor="30" AnchorPane.rightAnchor="100" AnchorPane.bottomAnchor="0">
 		<Group>
 			<StackPane>
 				<Group>
@@ -59,23 +59,23 @@
 		</menus>
 	</MenuBar>
 	
-	<VBox fx:id="toolBar" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="0" prefWidth="50">
-		<Button fx:id="lineButton" text="Line" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="penButton" text="Pen" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="eraserButton" text="Eraser" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="moveButton" text="Move" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="shapeButton" text="Shape" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="dropperButton" text="Dropper" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<Button fx:id="textButton" text="Text" prefWidth="50" prefHeight="50" onAction="#handleToolChange" />
-		<!-- <Button fx:id="fillButton" text="Fill" prefWidth="50" prefHeight="50" onAction="#handleToolChange"></Button> -->
+	<VBox fx:id="toolBar" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="0" prefWidth="30">
+		<Button fx:id="lineButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="penButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="eraserButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="moveButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="shapeButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="dropperButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<Button fx:id="textButton" styleClass="toolButton" prefWidth="30" prefHeight="30" onAction="#handleToolChange" />
+		<!-- <Button fx:id="fillButton" text="Fill" prefWidth="30" prefHeight="30" onAction="#handleToolChange"></Button> -->
 	</VBox>
 	
-	<HBox fx:id="bottomBar" alignment="bottom_left" prefHeight="20" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
-		<ColorPicker fx:id="primaryColor" onAction="#handleColorChange" />
-		<Button text="&#8596;" onAction="#handleColorSwap" />
-		<ColorPicker fx:id="secondaryColor" onAction="#handleColorChange" />
-		<Label text="Width:" />
-		<ComboBox fx:id="widthBox" editable="true" prefWidth="60">
+	<VBox fx:id="rightBar" alignment="top_right" spacing="10" prefWidth="100" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="30">
+		<ColorPicker fx:id="primaryColor" onAction="#handleColorChange" prefWidth="100" />
+		<Button text="&#8596;" onAction="#handleColorSwap"  prefWidth="100" />
+		<ColorPicker fx:id="secondaryColor" onAction="#handleColorChange" prefWidth="100" />
+		<Label text="Width:" styleClass="centered" prefWidth="100"/>
+		<ComboBox fx:id="widthBox" editable="true" prefWidth="100">
 			<items>
 				<FXCollections fx:factory="observableArrayList">
 					<String fx:value="2" />
@@ -86,7 +86,7 @@
 				</FXCollections>
 			</items>
 		</ComboBox>
-		<Label text="Scale:" />
+		<Label text="Scale:" styleClass="centered" prefWidth="100" />
 		<ComboBox fx:id="scaleBox" editable="true" prefWidth="100">
 			<items>
 				<FXCollections fx:factory="observableArrayList">
@@ -100,5 +100,5 @@
 				</FXCollections>
 			</items>
 		</ComboBox>
-	</HBox>
+	</VBox>
 </AnchorPane>

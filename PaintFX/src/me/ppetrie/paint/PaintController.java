@@ -280,29 +280,37 @@ public class PaintController {
 		}
 		for(Tool tool : ToolSet.getAll()) {
 			tool.getMenuItem().setSelected(false);
+			tool.getButton().getStyleClass().remove("selected");
 		}
 		EventTarget source = (EventTarget) event.getSource();
 		if(ToolSet.LINE.matches(source)) {
 			drawer.setTool(Tools.LINE);
 			ToolSet.LINE.getMenuItem().setSelected(true);
+			ToolSet.LINE.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.PEN.matches(source)) {
 			drawer.setTool(Tools.PEN);
 			ToolSet.PEN.getMenuItem().setSelected(true);
+			ToolSet.PEN.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.ERASER.matches(source)) {
 			drawer.setTool(Tools.ERASER);
 			ToolSet.ERASER.getMenuItem().setSelected(true);
+			ToolSet.ERASER.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.MOVE.matches(source)) {
 			drawer.setTool(Tools.MOVE);
 			ToolSet.MOVE.getMenuItem().setSelected(true);
+			ToolSet.MOVE.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.SHAPE.matches(source)) {
 			drawer.setTool(Tools.SHAPE);
 			ToolSet.SHAPE.getMenuItem().setSelected(true);
+			ToolSet.SHAPE.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.DROPPER.matches(source)) {
 			drawer.setTool(Tools.DROPPER);
 			ToolSet.DROPPER.getMenuItem().setSelected(true);
+			ToolSet.DROPPER.getButton().getStyleClass().add("selected");
 		} else if(ToolSet.TEXT.matches(source)) {
 			drawer.setTool(Tools.TEXT);
 			ToolSet.TEXT.getMenuItem().setSelected(true);
+			ToolSet.TEXT.getButton().getStyleClass().add("selected");
 		}
 		/*else if(event.getSource().equals(fillButton)) {
 			drawer.setTool(Tools.FILL);

@@ -30,10 +30,17 @@ public abstract class Tool {
 	}
 	
 	/**
-	 * @return	the menu item belonging to this shape
+	 * @return	the menu item belonging to this tool
 	 */
 	public CheckMenuItem getMenuItem() {
 		return this.menuItem;
+	}
+	
+	/**
+	 * @return	the button belonging to this tool
+	 */
+	public Button getButton() {
+		return this.button;
 	}
 	
 	/**
