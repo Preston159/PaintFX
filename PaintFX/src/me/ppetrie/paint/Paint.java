@@ -15,8 +15,15 @@ import javafx.scene.Scene;
 
 public class Paint extends Application {
 	
+	/**
+	 * The starting width/height of the stage
+	 */
 	private static final int WIDTH = 800, HEIGHT = 600;
 	
+	/**
+	 * The file to be opened when the program is opened
+	 * Remains null unless a command-line argument containing a file name is passed to the program
+	 */
 	private static File startFile = null;
 	
 	/**
@@ -35,9 +42,14 @@ public class Paint extends Application {
 	private ImageHandler imageHandler = null;
 	
 	/**
-	 * The text in the title bar of the window, excluding the "*" if unsaved
+	 * The text in the title bar of the window corresponding to the file name
 	 */
-	String title;
+	private String title;
+	
+	/**
+	 * The string to be appended to the title bar
+	 */
+	private final String titleAppend = " - PaintFX";
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -110,7 +122,7 @@ public class Paint extends Application {
 	 * @param name	the name of the current file
 	 */
 	public void setFileName(String name) {
-		primaryStage.setTitle(name);
+		primaryStage.setTitle(name + titleAppend);
 		title = name;
 	}
 	
@@ -120,9 +132,9 @@ public class Paint extends Application {
 	 */
 	public void setUnsaved(boolean unsaved) {
 		if(unsaved) {
-			primaryStage.setTitle(title + " *");
+			primaryStage.setTitle(title + "*" + titleAppend);
 		} else {
-			primaryStage.setTitle(title);
+			primaryStage.setTitle(title + titleAppend);
 		}
 	}
 	
