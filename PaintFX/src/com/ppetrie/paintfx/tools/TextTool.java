@@ -34,6 +34,9 @@ public class TextTool extends Tool {
 		
 	}
 	
+	/**
+	 * Show the text dialog and wait for input
+	 */
 	public void handleText() {
 		String result = textDialog.showAndWait();
 		
