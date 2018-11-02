@@ -1,6 +1,22 @@
 
 # PaintFX
 
+## v0.2.4
+
+### What's new
+
+- Cleaner UI
+
+### Known issues
+
+- Using the pen tool with a non-opaque color causes dark spots
+
+### What's next
+
+- Brushes
+- Layers
+- Transparency
+
 ## v0.2.3
 
 Public Release
