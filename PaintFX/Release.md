@@ -15,7 +15,7 @@
 
 - Brushes
 - Layers
-- Transparency
+- Transparency support
 
 ## v0.2.3
 
