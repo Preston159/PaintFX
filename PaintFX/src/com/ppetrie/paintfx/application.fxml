@@ -52,10 +52,10 @@
 				<CheckMenuItem fx:id="dropperCheck" text="Dropper" onAction="#handleToolChange" />
 				<CheckMenuItem fx:id="textCheck" text="Text" onAction="#handleToolChange" />
 			</Menu>
-			<Menu text="Select">
+			<!-- <Menu text="Select">
 				<MenuItem text="All" accelerator="Shortcut+A" />
 				<MenuItem text="None" accelerator="Shortcut+Shift+A" />
-			</Menu>
+			</Menu> -->
 		</menus>
 	</MenuBar>
 	
