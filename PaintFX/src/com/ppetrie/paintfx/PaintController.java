@@ -25,10 +25,17 @@ import javafx.scene.paint.Color;
 
 public class PaintController {
 	
-	private Paint paint = null;
-	
+	/**
+	 * The event listener
+	 */
 	private EventListener listener = null;
+	/**
+	 * The drawer
+	 */
 	private Drawer drawer = null;
+	/**
+	 * The past handler
+	 */
 	private PastHandler pastHandler = null;
 	
 	private double scale = 1;
@@ -130,10 +137,9 @@ public class PaintController {
 	
 	/**
 	 * Initiate variables, listeners, tools, etc.
-	 * @param paint	the main JavaFX class of the program
+	 * @param paint	the main class of the program
 	 */
 	public void init(Paint paint) {
-		this.paint = paint;
 		listener = new EventListener(paint);
 		drawer = new Drawer(paint, this);
 		pastHandler = new PastHandler(paint);

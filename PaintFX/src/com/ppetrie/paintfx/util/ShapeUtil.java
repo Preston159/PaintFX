@@ -4,7 +4,13 @@ import java.util.HashMap;
 
 public class ShapeUtil {
 	
+	/**
+	 * The number of radians corresponding to one-fifth of a circle
+	 */
 	private static final double FIFTH_CIRCLE = (2 * Math.PI) / 5;
+	/**
+	 * The inner pentagon points of the unit star
+	 */
 	private static final double[][] STAR_PENT_POINTS = {
 			{ Math.sin(FIFTH_CIRCLE), Math.cos(FIFTH_CIRCLE) },
 			{ Math.sin(2 * FIFTH_CIRCLE), Math.cos(2 * FIFTH_CIRCLE) },
@@ -12,6 +18,9 @@ public class ShapeUtil {
 			{ Math.sin(4 * FIFTH_CIRCLE), Math.cos(4 * FIFTH_CIRCLE) },
 			{ Math.sin(5 * FIFTH_CIRCLE), Math.cos(5 * FIFTH_CIRCLE) }
 	};
+	/**
+	 * The outer tip points of the unit star
+	 */
 	private static final double[][] STAR_TIP_POINTS = {
 			{ Math.sin(FIFTH_CIRCLE + (FIFTH_CIRCLE / 2)), Math.cos(FIFTH_CIRCLE + (FIFTH_CIRCLE / 2)) },
 			{ Math.sin((2 * FIFTH_CIRCLE) + (FIFTH_CIRCLE / 2)), Math.cos((2 * FIFTH_CIRCLE) + (FIFTH_CIRCLE / 2)) },

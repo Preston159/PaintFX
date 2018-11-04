@@ -2,7 +2,6 @@ package com.ppetrie.paintfx.dialogs;
 
 import com.ppetrie.paintfx.PaintController;
 
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -17,15 +16,18 @@ import javafx.util.Pair;
 
 public class TextDialog {
 	
-	private static final int DEFAULT_FONT_SIZE = 12;
-	
-	private PaintController controller;
+	/**
+	 * The FontDialog instance which will be accessed when the user attempts to change the font
+	 */
 	private FontDialog fontDialog;
 	
 	private Dialog<String> textDialog;
 	
-	public TextDialog(PaintController controller) {
-		this.controller = controller;
+	/**
+	 * Create a TextDialog
+	 * @param controller	The PaintController this object will use to change the font and size
+	 */
+	public TextDialog(final PaintController controller) {
 		fontDialog = new FontDialog();
 		textDialog = new Dialog<>();
 		textDialog.setTitle("Text tool");

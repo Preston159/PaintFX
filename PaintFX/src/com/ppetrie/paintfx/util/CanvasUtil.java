@@ -7,6 +7,12 @@ public class CanvasUtil {
 	/**
 	 * An integer wrapper for the
 	 * {@link com.ppetrie.paintfx.util.CanvasUtil#getCorners(Paint, double, double, double, double) getCorners} function
+	 * @param paint	the main JavaFX class of the program
+	 * @param x1	the first x-coordinate
+	 * @param x2	the second x-coordinate
+	 * @param y1	the first y-coordinate
+	 * @param y2	the second y-coordinate
+	 * @return		two pairs of coordinates in the form { {x1, y1}, {x2, y2} } where the first pair is the top left corner
 	 */
 	public static int[][] getCorners(Paint paint, int x1, int x2, int y1, int y2) {
 		double[][] doubleCorners = getCorners(paint, (double) x1, x2, y1, y2);

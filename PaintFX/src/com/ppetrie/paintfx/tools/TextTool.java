@@ -19,10 +19,19 @@ import javafx.scene.transform.Transform;
 
 public class TextTool extends Tool {
 	
+	/**
+	 * The controller corresponding to the canvas on which the text will be drawn
+	 */
 	private PaintController controller;
 	
 	private TextDialog textDialog;
 	
+	/**
+	 * Create a TextTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public TextTool(Button button, CheckMenuItem menuItem, PaintController controller) {
 		super(button, menuItem);
 		this.controller = controller;

@@ -6,8 +6,29 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class Rectangle extends PointShape {
 	
-	private double[] tl, tr, bl, br;
+	/**
+	 * The top left corner of the rectangle
+	 */
+	private double[] tl;
+	/**
+	 * The top right corner of the rectangle
+	 */
+	private double[] tr;
+	/**
+	 * The bottom left corner of the rectangle
+	 */
+	private double[] bl;
+	/**
+	 * The bottom right corner of the rectangle
+	 */
+	private double[] br;
 	
+	/**
+	 * Create a Rectangle
+	 * @param paint	the main class of the program
+	 * @param tl	the top left corner of the rectangle
+	 * @param br	the bottom right corner of the rectangle
+	 */
 	public Rectangle(Paint paint, double[] tl, double[] br) {
 		this.paint = paint;
 		this.center = new double[]{ (tl[0] + br[0] / 2), (tl[1] + br[1]) /2 };

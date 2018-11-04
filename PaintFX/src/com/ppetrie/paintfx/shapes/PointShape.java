@@ -4,6 +4,9 @@ import javafx.scene.canvas.GraphicsContext;
 
 public abstract class PointShape extends Shape {
 	
+	/**
+	 * The center point of the shape
+	 */
 	protected double[] center;
 	
 	/**

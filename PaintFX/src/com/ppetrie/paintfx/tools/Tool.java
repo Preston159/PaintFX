@@ -10,7 +10,13 @@ import javafx.scene.input.MouseEvent;
 
 public abstract class Tool {
 	
+	/**
+	 * The button corresponding to this tool
+	 */
 	protected Button button;
+	/**
+	 * The menu item corresponding to this tool
+	 */
 	protected CheckMenuItem menuItem;
 	
 	public Tool(Button button, CheckMenuItem menuItem) {

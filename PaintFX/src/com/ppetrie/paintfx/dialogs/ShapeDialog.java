@@ -6,16 +6,22 @@ import javafx.scene.control.Alert.AlertType;
 
 public class ShapeDialog {
 	
-	public static final ButtonType RECTANGLE = new ButtonType("Rectangle");
-	public static final ButtonType SQUARE = new ButtonType("Square");
-	public static final ButtonType OVAL = new ButtonType("Oval");
-	public static final ButtonType CIRCLE = new ButtonType("Circle");
-	public static final ButtonType STAR = new ButtonType("Star");
-	public static final ButtonType TUBE = new ButtonType("Tube");
-	public static final ButtonType NGON = new ButtonType("N-Gon");
+	/**
+	 * The ButtonTypes which will be shown when the user selects a shape
+	 */
+	public static final ButtonType RECTANGLE = new ButtonType("Rectangle"),
+	SQUARE = new ButtonType("Square"),
+	OVAL = new ButtonType("Oval"),
+	CIRCLE = new ButtonType("Circle"),
+	STAR = new ButtonType("Star"),
+	TUBE = new ButtonType("Tube"),
+	NGON = new ButtonType("N-Gon");
 	
 	private Alert alert;
 	
+	/**
+	 * Create a ShapeDialog
+	 */
 	public ShapeDialog() {
 		alert = new Alert(AlertType.NONE, "Please select the shape type you would like to use.",
 				RECTANGLE, SQUARE, OVAL, CIRCLE, STAR, TUBE, NGON);

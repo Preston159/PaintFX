@@ -17,13 +17,35 @@ import javafx.scene.input.MouseEvent;
 
 public class MoveTool extends Tool {
 	
+	/**
+	 * The main class of the program
+	 */
 	private Paint paint;
 	
-	private boolean awaitingPlace, justPlaced;
+	/**
+	 * Whether an image is currently selected for placing
+	 */
+	private boolean awaitingPlace;
+	/**
+	 * Whether an image was just placed
+	 */
+	private boolean justPlaced;
+	/**
+	 * The current selection
+	 */
 	private BufferedImage selection;
 	
+	/**
+	 * The position of the mouse when it was pressed
+	 */
 	private double[] lastPos = new double[2];
 	
+	/**
+	 * Create a DropperTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public MoveTool(Button button, CheckMenuItem menuItem, Paint paint) {
 		super(button, menuItem);
 		this.paint = paint;

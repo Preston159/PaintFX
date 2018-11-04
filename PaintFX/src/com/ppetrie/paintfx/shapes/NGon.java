@@ -6,11 +6,25 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class NGon extends PointShape {
 	
+	/**
+	 * The number of sides to draw
+	 */
 	private static int n = 5;
 	
-	private double[] tl, br;
-	private double[] center;
+	/**
+	 * The top left corner of the shape
+	 */
+	private double[] tl;
+	/**
+	 * The bottom right corner of the shape
+	 */
+	private double[] br;
 	
+	/**
+	 * Create an NGon
+	 * @param tl	the top left corner of the shape
+	 * @param br	the bottom right corner of the shape
+	 */
 	public NGon(double[] tl, double[] br) {
 		this.tl = tl;
 		this.br = br;

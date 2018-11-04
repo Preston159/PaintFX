@@ -23,6 +23,9 @@ import javafx.util.Pair;
 
 public class ImageHandler {
 	
+	/**
+	 * The main class of the program
+	 */
 	private Paint paint;
 	
 	/**
@@ -34,7 +37,10 @@ public class ImageHandler {
 	 */
 	private boolean imageChanged = false;
 	
-	
+	/**
+	 * Create an ImageHandler
+	 * @param paint	the main class of the program
+	 */
 	public ImageHandler(Paint paint) {
 		this.paint = paint;
 	}

@@ -7,9 +7,21 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class Star extends PointShape {
 	
+	/**
+	 * The points corresponding to the pentagon at the center of the star
+	 */
 	private double[][] pentPoints;
+	/**
+	 * The points corresponding to the tips of the star points
+	 */
 	private double[][] tipPoints;
 	
+	/**
+	 * Create a Star
+	 * @param paint	the main class of the program
+	 * @param tl	the top left corner of the star
+	 * @param br	the bottom right corner of the star
+	 */
 	public Star(Paint paint, double[] tl, double[] br) {
 		this.center = new double[]{ (tl[0] + br[0]) / 2, (tl[1] + br[1]) / 2 };
 		pentPoints = ShapeUtil.getStarPentPoints(tl, br, center);

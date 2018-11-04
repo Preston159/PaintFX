@@ -2,6 +2,9 @@ package com.ppetrie.paintfx.tools;
 
 import java.util.ArrayList;
 
+/**
+ * Stores an instance of each tool
+ */
 public class ToolSet {
 	
 	public static DropperTool DROPPER;
@@ -12,6 +15,9 @@ public class ToolSet {
 	public static ShapeTool SHAPE;
 	public static TextTool TEXT;
 	
+	/**
+	 * The set of all tools
+	 */
 	public static ArrayList<Tool> all = new ArrayList<Tool>(7);
 	
 	/**

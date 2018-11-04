@@ -13,7 +13,17 @@ import javafx.util.Pair;
 
 public class FontDialog {
 	
-	private static final int DEFAULT_FONT_SIZE = 12;
+	/**
+	 * The number by which to multiply the input font size
+	 */
+	private static final int FONT_MULTIPLIER = 5;
+	/**
+	 * The default font size
+	 */
+	private static final int DEFAULT_FONT_SIZE = 12 * FONT_MULTIPLIER;
+	/**
+	 * The list of fonts which should be available in the dropdown menu
+	 */
 	private static final ArrayList<String> fonts = new ArrayList<String>();
 	static {
 		fonts.add("Calibri");
@@ -22,6 +32,9 @@ public class FontDialog {
 	
 	private Dialog<Pair<String, Integer>> textDialog;
 	
+	/**
+	 * Create a FontDialog
+	 */
 	public FontDialog() {
 		textDialog = new Dialog<>();
 		textDialog.setTitle("Font selection");
@@ -43,7 +56,7 @@ public class FontDialog {
 		textDialog.getDialogPane().setContent(gridPane);
 		textDialog.setResultConverter(dialogButton -> {
 			try {
-				return new Pair<>(fontName.getValue(), Integer.valueOf(fontSize.getText()));
+				return new Pair<>(fontName.getValue(), Integer.valueOf(fontSize.getText()) * FONT_MULTIPLIER);
 			} catch(NumberFormatException nfe) {
 				return new Pair<>(fontName.getValue(), DEFAULT_FONT_SIZE);
 			}

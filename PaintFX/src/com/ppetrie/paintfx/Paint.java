@@ -87,6 +87,10 @@ public class Paint extends Application {
 		}
 	}
 	
+	/**
+	 * Launch the program
+	 * @param args	args[0] will be interpreted as a file and PaintFX will attempt to open that file on launch
+	 */
 	public static void main(String[] args) {
 		if(args.length > 0) {
 			startFile = new File(args[0]);

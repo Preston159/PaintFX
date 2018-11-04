@@ -7,13 +7,29 @@ import javafx.scene.image.Image;
 
 public class PastHandler {
 	
+	/**
+	 * The main class of the program
+	 */
 	private Paint paint;
 	
+	/**
+	 * The number of steps forward/backward which will be saved
+	 */
 	private static final int NUM_STEPS = 15;
 	
+	/**
+	 * The stack containing past images for undo
+	 */
 	private FixedStack<Image> past = new FixedStack<Image>(NUM_STEPS);
+	/**
+	 * The stack containing future images for redo
+	 */
 	private FixedStack<Image> future = new FixedStack<Image>(NUM_STEPS);
 	
+	/**
+	 * Create a PastHandler
+	 * @param paint	the main class of the program
+	 */
 	public PastHandler(Paint paint) {
 		this.paint = paint;
 	}

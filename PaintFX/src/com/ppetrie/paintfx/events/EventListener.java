@@ -129,6 +129,7 @@ public class EventListener{
 		case PASTE:
 			paint.getController().getDrawer().paste();
 			break;
+		case CROP: break;
 	/*	case CROP:
 			paint.getController().getDrawer().crop();	*/
 		}

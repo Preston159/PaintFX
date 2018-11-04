@@ -6,8 +6,29 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class Square extends PointShape {
 	
-	private double[] tl, tr, bl, br;
+	/**
+	 * The top left corner of the square
+	 */
+	private double[] tl;
+	/**
+	 * The top right corner of the square
+	 */
+	private double[] tr;
+	/**
+	 * The bottom left corner of the square
+	 */
+	private double[] bl;
+	/**
+	 * The bottom right corner of the square
+	 */
+	private double[] br;
 	
+	/**
+	 * Create a Square
+	 * @param paint	the main class of the program
+	 * @param tl	the top left corner of the square
+	 * @param br	the bottom right corner of the square
+	 */
 	public Square(Paint paint, double[] tl, double[] br) {
 		this.paint = paint;
 		

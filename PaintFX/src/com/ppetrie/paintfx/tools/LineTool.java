@@ -9,8 +9,17 @@ import javafx.scene.input.MouseEvent;
 
 public class LineTool extends Tool {
 	
+	/**
+	 * The position of the mouse when it was pressed
+	 */
 	private double[] lastPos = new double[2];
 	
+	/**
+	 * Create a LineTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public LineTool(Button button, CheckMenuItem menuItem) {
 		super(button, menuItem);
 	}

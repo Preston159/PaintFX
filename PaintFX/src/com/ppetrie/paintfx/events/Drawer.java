@@ -1,34 +1,18 @@
 package com.ppetrie.paintfx.events;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.ppetrie.paintfx.Paint;
 import com.ppetrie.paintfx.PaintController;
 import com.ppetrie.paintfx.dialogs.NDialog;
 import com.ppetrie.paintfx.dialogs.ShapeDialog;
-import com.ppetrie.paintfx.dialogs.TextDialog;
-import com.ppetrie.paintfx.shapes.Circle;
-import com.ppetrie.paintfx.shapes.DrawShape;
-import com.ppetrie.paintfx.shapes.NGon;
-import com.ppetrie.paintfx.shapes.Oval;
-import com.ppetrie.paintfx.shapes.PointShape;
-import com.ppetrie.paintfx.shapes.Rectangle;
-import com.ppetrie.paintfx.shapes.Shape;
-import com.ppetrie.paintfx.shapes.Square;
-import com.ppetrie.paintfx.shapes.Star;
-import com.ppetrie.paintfx.shapes.Tube;
 import com.ppetrie.paintfx.tools.ToolSet;
-import com.ppetrie.paintfx.util.CanvasUtil;
 import com.ppetrie.paintfx.util.ColorUtil;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
@@ -37,13 +21,9 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Font;
 import javafx.scene.transform.Transform;
-import javafx.util.Pair;
 
 public class Drawer implements EventHandler<MouseEvent> {
-	
-	private static final String DEFAULT_FONT = "Calibri";
 	
 	private Paint paint;
 	
@@ -63,7 +43,6 @@ public class Drawer implements EventHandler<MouseEvent> {
 	private PaintController controller;
 	
 	private ShapeDialog shapeDialog;
-	private TextDialog textDialog;
 	private NDialog nDialog;
 	
 	/**
@@ -76,6 +55,9 @@ public class Drawer implements EventHandler<MouseEvent> {
 	 */
 	private boolean fillShapesSec = false;
 	
+	/**
+	 * The system clipboard
+	 */
 	private Clipboard clipboard;
 	
 	
@@ -83,8 +65,6 @@ public class Drawer implements EventHandler<MouseEvent> {
 		this.paint = paint;
 		this.controller = controller;
 		this.shapeDialog = new ShapeDialog();
-		this.textDialog = new TextDialog(controller);
-		this.nDialog = new NDialog(controller);
 		this.clipboard = Clipboard.getSystemClipboard();
 	}
 	

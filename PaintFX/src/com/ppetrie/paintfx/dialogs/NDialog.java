@@ -1,6 +1,5 @@
 package com.ppetrie.paintfx.dialogs;
 
-import com.ppetrie.paintfx.PaintController;
 import com.ppetrie.paintfx.shapes.NGon;
 
 import javafx.geometry.Insets;
@@ -12,14 +11,12 @@ import javafx.scene.layout.GridPane;
 
 public class NDialog {
 	
-	private static final int DEFAULT_FONT_SIZE = 12;
-	
-	private PaintController controller;
-	
 	private Dialog<Integer> textDialog;
 	
-	public NDialog(PaintController controller) {
-		this.controller = controller;
+	/**
+	 * Create an NDialog
+	 */
+	public NDialog() {
 		textDialog = new Dialog<>();
 		textDialog.setTitle("NGon");
 		textDialog.setHeaderText("Please enter the number of sides");

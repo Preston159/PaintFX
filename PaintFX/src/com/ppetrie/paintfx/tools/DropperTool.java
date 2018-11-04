@@ -11,8 +11,17 @@ import javafx.scene.input.MouseEvent;
 
 public class DropperTool extends Tool {
 	
+	/**
+	 * The main class of the program
+	 */
 	private Paint paint;
 	
+	/**
+	 * Create a DropperTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public DropperTool(Button button, CheckMenuItem menuItem, Paint paint) {
 		super(button, menuItem);
 		this.paint = paint;

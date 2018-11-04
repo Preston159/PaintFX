@@ -9,6 +9,12 @@ import javafx.scene.input.MouseEvent;
 
 public class EraserTool extends Tool {
 	
+	/**
+	 * Create an EraserTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public EraserTool(Button button, CheckMenuItem menuItem) {
 		super(button, menuItem);
 	}

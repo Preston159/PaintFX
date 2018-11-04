@@ -11,8 +11,17 @@ import javafx.scene.input.MouseEvent;
 
 public class PenTool extends Tool {
 	
+	/**
+	 * The position of the mouse at the start of this frame of animation
+	 */
 	private double[] lastPos = new double[2];
 	
+	/**
+	 * Create a DropperTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public PenTool(Button button, CheckMenuItem menuItem) {
 		super(button, menuItem);
 	}

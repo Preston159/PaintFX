@@ -22,13 +22,32 @@ import javafx.scene.input.MouseEvent;
 
 public class ShapeTool extends Tool {
 	
+	/**
+	 * The main class of the program
+	 */
 	private Paint paint;
 	
+	/**
+	 * The currently-selected shape
+	 */
 	private Shapes currentShape = Shapes.RECTANGLE;
+	/**
+	 * Whether to fill shapes when drawn
+	 */
 	private boolean fillShapes = false;
 	
+	
+	/**
+	 * The position of the mouse when it was pressed
+	 */
 	private double[] lastPos = new double[2];
 	
+	/**
+	 * Create a ShapeTool
+	 * @param button	the tool button corresponding to this tool
+	 * @param menuItem	the menu item corresponding to this tool
+	 * @param paint		the main class of the program
+	 */
 	public ShapeTool(Button button, CheckMenuItem menuItem, Paint paint) {
 		super(button, menuItem);
 		this.paint = paint;
@@ -48,6 +67,11 @@ public class ShapeTool extends Tool {
 		}
 	}
 	
+	/**
+	 * Update the drawn shape on the draw canvas
+	 * @param event			the mouse event from the user
+	 * @param controller	the controller corresponding to the canvas on which the update should be drawn
+	 */
 	private void doShape(MouseEvent event, PaintController controller) {
 		Shape shape;
 		double[][] corners = CanvasUtil.getCorners(paint, lastPos[0], event.getX(), lastPos[1], event.getY());
@@ -90,14 +114,25 @@ public class ShapeTool extends Tool {
 		}
 	}
 	
+	/**
+	 * Set the currently-selected shape
+	 * @param shape	the new shape
+	 */
 	public void setCurrentShape(Shapes shape) {
 		this.currentShape = shape;
 	}
 	
+	/**
+	 * Set whether to fill shapes when drawn
+	 * @param fill	whether to fill shapes
+	 */
 	public void setFillShapes(boolean fill) {
 		this.fillShapes = fill;
 	}
 	
+	/**
+	 * @return	true if shapes are to be filled, false otherwise
+	 */
 	public boolean getFillShapes() {
 		return this.fillShapes;
 	}

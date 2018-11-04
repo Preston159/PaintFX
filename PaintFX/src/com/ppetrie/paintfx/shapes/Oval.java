@@ -7,8 +7,21 @@ import javafx.scene.shape.ArcType;
 
 public class Oval extends DrawShape {
 	
-	int rx, ry;
+	/**
+	 * the x-radius of the oval
+	 */
+	private int rx;
+	/**
+	 * the y-radius of the oval
+	 */
+	private int ry;
 	
+	/**
+	 * Create an Oval
+	 * @param paint	the main class of the program
+	 * @param tl	the top left corner of the shape
+	 * @param br	the bottom right corner of the shape
+	 */
 	public Oval(Paint paint, double[] tl, double[] br) {
 		this.paint = paint;
 		this.center = new double[]{ (tl[0] + br[0] / 2), (tl[1] + br[1]) /2 };

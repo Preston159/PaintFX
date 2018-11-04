@@ -7,14 +7,30 @@ import javafx.scene.shape.ArcType;
 
 public class Circle extends DrawShape {
 	
-	int radius;
+	/**
+	 * The radius of the circle
+	 */
+	private int radius;
 	
+	/**
+	 * Create a Circle
+	 * @param paint	the main class of the program
+	 * @param x		the x-coordinate of the center of the circle
+	 * @param y		the y-coordinate of the center of the circle
+	 * @param r		the radius of the circle
+	 */
 	public Circle(Paint paint, int x, int y, int r) {
 		this.paint = paint;
 		this.center = new double[]{ x, y };
 		this.radius = r;
 	}
 	
+	/**
+	 * Create a Circle
+	 * @param paint	the main class of the program
+	 * @param tl	the top left corner of the circle
+	 * @param br	the bottom right corner of the circle
+	 */
 	public Circle(Paint paint, double[] tl, double[] br) {
 		this.paint = paint;
 		this.center = new double[]{ (tl[0] + br[0] / 2), (tl[1] + br[1]) /2 };
