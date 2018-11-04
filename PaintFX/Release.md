@@ -1,6 +1,21 @@
 
 # PaintFX
 
+## v0.2.5
+
+- Behind-the-scenes improvements
+- Removed buttons which don't yet do anything
+
+### Known issues
+
+- Using the pen tool with a non-opaque color causes dark spots
+
+### What's next
+
+- Brushes
+- Layers
+- Transparency support
+
 ## v0.2.4
 
 ### What's new
