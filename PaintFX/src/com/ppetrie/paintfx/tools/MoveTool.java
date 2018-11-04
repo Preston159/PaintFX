@@ -41,7 +41,7 @@ public class MoveTool extends Tool {
 	private double[] lastPos = new double[2];
 	
 	/**
-	 * Create a DropperTool
+	 * Create a MoveTool
 	 * @param button	the tool button corresponding to this tool
 	 * @param menuItem	the menu item corresponding to this tool
 	 * @param paint		the main class of the program

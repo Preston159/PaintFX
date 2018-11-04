@@ -18,7 +18,6 @@ public class LineTool extends Tool {
 	 * Create a LineTool
 	 * @param button	the tool button corresponding to this tool
 	 * @param menuItem	the menu item corresponding to this tool
-	 * @param paint		the main class of the program
 	 */
 	public LineTool(Button button, CheckMenuItem menuItem) {
 		super(button, menuItem);

@@ -28,9 +28,9 @@ public class TextTool extends Tool {
 	
 	/**
 	 * Create a TextTool
-	 * @param button	the tool button corresponding to this tool
-	 * @param menuItem	the menu item corresponding to this tool
-	 * @param paint		the main class of the program
+	 * @param button		the tool button corresponding to this tool
+	 * @param menuItem		the menu item corresponding to this tool
+	 * @param controller	the controller corresponding to the canvas on which the text should be drawn
 	 */
 	public TextTool(Button button, CheckMenuItem menuItem, PaintController controller) {
 		super(button, menuItem);
